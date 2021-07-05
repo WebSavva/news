@@ -1,0 +1,48 @@
+.news-card {
+    height: 100%;
+    &--vertical {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        text-transform: initial;
+        word-break: break-all;
+        margin: 1rem 0;
+    }
+
+    &__info {
+        display: flex;
+        gap: 1rem;
+        color: lighten($light-gray-color-2, 20%);
+        font-size: 1.1rem;
+    }
+
+    &__published-date,
+    &__comments-count{
+        span {
+            font-style: italic;
+        }
+    }
+
+
+    &__comments-count {
+        span {
+            transition: $default-transition;
+            &:hover {
+                color: $light-red;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 1.3rem;
+        margin-right: .5rem;
+    }
+}

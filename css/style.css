@@ -1,0 +1,342 @@
+html {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 1.4rem; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+button {
+  border: none;
+  background: none; }
+
+html {
+  font-size: 62.5%; }
+
+.row {
+  width: 114rem;
+  margin: 0 auto; }
+
+.ad-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .ad-block__title {
+    color: #777777;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase; }
+  .ad-block__img {
+    margin-top: 1rem; }
+
+.header__info {
+  background: #111111;
+  padding: 1rem 0; }
+
+.header__info-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  color: #777777; }
+
+.header__info-list {
+  display: flex;
+  align-items: center; }
+
+.header__info-item {
+  padding-right: 2rem;
+  display: flex;
+  align-items: center; }
+  .header__info-item:not(:last-child) {
+    border-right: 1px dotted currentColor; }
+  .header__info-item:not(:first-child) {
+    padding-left: 2rem; }
+
+.header__info-icon {
+  font-size: 1.7rem;
+  padding: 0 .5rem; }
+
+.header__info-link:link, .header__info-link:visited {
+  color: currentColor;
+  transition: all 0.3s; }
+
+.header__info-link:hover {
+  color: #fff; }
+
+.header__info-icons {
+  display: flex; }
+
+.header__link-media:link, .header__link-media:visited {
+  color: currentColor;
+  padding: .3rem 0;
+  transition: all 0.3s;
+  border-radius: 3px; }
+
+.header__link-media:hover {
+  background-color: #ee3a3a;
+  color: #fff; }
+
+.header__link-media:not(:last-child) {
+  margin-right: .2rem; }
+
+.header__img-box {
+  background: #222222;
+  padding: 2rem 0; }
+
+.header__img-box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: #FAFAFA;
+  border-bottom: 1px solid #e1e1e1; }
+  .nav__content {
+    display: flex;
+    justify-content: space-between; }
+  .nav__menu {
+    display: flex;
+    position: relative; }
+  .nav__item {
+    color: #777777;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.3s; }
+    .nav__item:not(:last-child) {
+      margin-right: 1px; }
+  .nav__item:hover .nav__link:link, .nav__item:hover .nav__link:visited {
+    color: #fff; }
+  .nav__item:hover .nav__link::before {
+    height: 100%;
+    z-index: -1; }
+  .nav__link:link, .nav__link:visited {
+    position: relative;
+    padding: 2.5rem 1.2rem;
+    display: block;
+    font-weight: bold;
+    color: inherit;
+    z-index: 10;
+    transition: all .2s; }
+  .nav__link::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: var(--current-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: inherit; }
+  .nav__chevron-icon-down {
+    margin-left: .5rem;
+    font-size: 1.1rem; }
+  .nav__dropdown {
+    border-top: 2px solid var(--current-color);
+    position: absolute;
+    background: #FAFAFA;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease-in;
+    min-width: 20rem; }
+    .nav__dropdown--vertical {
+      left: 0;
+      top: 100%; }
+    .nav__dropdown--horizontal {
+      left: 100%;
+      top: -2px; }
+    .nav__dropdown--world {
+      display: flex;
+      background: #fff; }
+  .nav__dropdown-list, .nav__world-list {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA; }
+  .nav__world-list {
+    flex: 0 0 15%; }
+  .nav__world-carousel-wrapper {
+    padding: 1rem 1.5rem; }
+  .nav__world-item {
+    font-size: 1.1rem;
+    color: #919191;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+    text-align: right;
+    border-bottom: 0.5px solid rgba(119, 119, 119, 0.1);
+    transition: all 0.3s; }
+    .nav__world-item:hover {
+      background: white;
+      color: var(--current-color); }
+  .nav__dropdown-item {
+    transition: all 0.3s; }
+    .nav__dropdown-item:not(:last-child) {
+      border-bottom: 0.5px solid rgba(119, 119, 119, 0.1); }
+    .nav__dropdown-item:hover {
+      background-color: #ededed;
+      color: #444444; }
+    .nav__dropdown-item--selected {
+      background: white;
+      color: var(--current-color); }
+  .nav__chevron-icon-right {
+    margin-left: auto;
+    padding-left: 1rem; }
+  .nav__dropdown-link:link, .nav__dropdown-link:visited {
+    text-transform: uppercase;
+    transition: inherit;
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin: 1.5rem; }
+  .nav__dropdown-link--nested:link, .nav__dropdown-link--nested:visited {
+    display: flex;
+    align-items: baseline; }
+  .nav__dropdown-link {
+    display: block; }
+  .nav__dropdown-container--small {
+    position: relative; }
+  .nav__dropdown-container:hover > .nav__dropdown {
+    visibility: visible;
+    opacity: 1; }
+  .nav__search {
+    padding: 1rem;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, min-content); }
+  .nav__search-input {
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: 1px solid #e1e1e1;
+    grid-column: 1 / -1;
+    grid-row: 1 /-1;
+    z-index: 1; }
+    .nav__search-input:focus {
+      outline: none; }
+  .nav__search-btn {
+    grid-column: 2 / span 1;
+    grid-row: 1 /-1;
+    z-index: 2;
+    align-self: center;
+    padding-right: 1rem;
+    cursor: pointer;
+    border-radius: 5px; }
+  .nav__icon {
+    font-size: 1.2rem;
+    color: #777777; }
+
+[data-nav-item-color="red"] {
+  --current-color:#F44336; }
+
+[data-nav-item-color="light-blue"] {
+  --current-color:#33A3F1; }
+
+[data-nav-item-color="orange"] {
+  --current-color:#F58021; }
+
+[data-nav-item-color="green"] {
+  --current-color:#74B430; }
+
+[data-nav-item-color="purple"] {
+  --current-color:#AA35D6; }
+
+[data-nav-item-color="light-brown"] {
+  --current-color:#D6AC1B; }
+
+[data-nav-item-color="blue"] {
+  --current-color:#4C60F6; }
+
+[data-nav-item-color="light-green"] {
+  --current-color:#32B47B; }
+
+[data-nav-item-color="brown"] {
+  --current-color:#AB632E; }
+
+.news-card {
+  height: 100%; }
+  .news-card--vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .news-card__img {
+    width: 100%; }
+  .news-card__title {
+    font-size: 1.3rem;
+    text-transform: initial;
+    word-break: break-all;
+    margin: 1rem 0; }
+  .news-card__info {
+    display: flex;
+    gap: 1rem;
+    color: #aaaaaa;
+    font-size: 1.1rem; }
+  .news-card__published-date span, .news-card__comments-count span {
+    font-style: italic; }
+  .news-card__comments-count span {
+    transition: all 0.3s; }
+    .news-card__comments-count span:hover {
+      color: #ee3a3a; }
+  .news-card__icon {
+    font-size: 1.3rem;
+    margin-right: .5rem; }
+
+.carousel {
+  position: relative;
+  width: 100%; }
+  .carousel__head {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0; }
+  .carousel__title {
+    font-size: 1.3rem;
+    text-align: justify; }
+  .carousel__btn--external {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 0.5px solid rgba(119, 119, 119, 0.1);
+    background: #fff;
+    display: inline-flex;
+    align-items: start;
+    justify-content: center; }
+  .carousel__control-icon--external {
+    font-size: .8rem;
+    color: #aaaaaa; }
+  .carousel__view {
+    width: 100%;
+    overflow: hidden; }
+  .carousel__content {
+    display: flex;
+    transition: all .3s; }
+  .carousel__item {
+    flex: 0 0 50%;
+    padding: 0 1rem; }
+  .carousel__img {
+    width: 100%; }
+  .carousel__dots-wrapper {
+    position: absolute;
+    display: flex;
+    z-index: 10; }
+  .carousel__dot {
+    background-color: #fff;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 100px;
+    transition: all .4s; }
+    .carousel__dot:not(:last-child) {
+      margin-right: 1rem; }
+    .carousel__dot:hover, .carousel__dot--selected {
+      background-color: var(--carousel-dot-color); }

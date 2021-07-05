@@ -1,4 +1,4 @@
-class Carousel {
+export default class Carousel {
   constructor({type = "small", breakpoints = {}, interval = 3e3, id, dotControlsColor = "gray", dotControlsPosition = "top-right" } = {}) {
     //initializaing the configuration 
     this.type = type

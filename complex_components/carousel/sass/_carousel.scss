@@ -2,6 +2,39 @@
 .carousel {
     position: relative;
     width: 100%;
+
+    //head
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5rem 0;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        text-align: justify;
+    }
+
+    &__btn {
+        &--external {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            border: $light-gray-border;
+            background: #fff;
+            display: inline-flex;
+            align-items: start;
+            justify-content: center;
+        }
+    }
+
+    &__control-icon {
+        &--external {
+            font-size: .8rem;
+            color: lighten($light-gray-color-2, 20%);
+        }
+    }
+
+    //body
     &__view {
         width: 100%;
         overflow: hidden;
