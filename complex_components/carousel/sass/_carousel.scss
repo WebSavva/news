@@ -8,12 +8,9 @@
         display: flex;
         justify-content: space-between;
         margin: 1.5rem 0;
+        align-items: center;
     }
 
-    &__title {
-        font-size: 1.3rem;
-        text-align: justify;
-    }
 
     &__btn {
         &--external {

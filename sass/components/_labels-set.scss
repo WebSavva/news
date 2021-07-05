@@ -1,0 +1,35 @@
+.labels-set {
+    display: flex;
+
+    &__item {
+        font-size: 1.1rem;
+        border: $light-gray-border;
+        padding: .5rem 1rem;
+        position: relative;
+        border-radius: $small-rounded;
+        transition: $default-transition;
+        cursor: pointer;
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 4px;
+            background: inherit;
+            -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+        }
+
+        &:hover,
+        &--selected {
+            background: $light-yellow;
+            color: $light-gray-color-1;
+        }
+    }
+    
+}
