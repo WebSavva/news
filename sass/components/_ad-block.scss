@@ -1,0 +1,17 @@
+.ad-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        color: $light-gray-color-2;
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        margin-top: 1rem;
+    }
+
+}

@@ -1,0 +1,14 @@
+@mixin pseudoLink($type) {
+    @if $type == link {
+        &:link,
+        &:visited {
+            @content;
+        }
+    }
+
+    @if $type == hover {
+        &:hover {
+            @content;
+        }
+    }
+}

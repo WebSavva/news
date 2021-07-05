@@ -1,0 +1,15 @@
+ul {
+    list-style: none;
+}
+
+a {
+    &:link,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+button {
+    border: none;
+    background: none;
+}
