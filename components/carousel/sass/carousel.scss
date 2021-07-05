@@ -1,0 +1,23 @@
+//CAROUSEL
+.carousel {
+    
+    width: 100%;
+    &__view {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__content {
+        display: flex;
+        transition: all .3s;
+    }
+
+    &__item {
+        flex: 0 0 50%;
+        padding: 0 1rem;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
