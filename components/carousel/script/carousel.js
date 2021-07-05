@@ -74,8 +74,7 @@ class Carousel {
     }%)`;
 
     if (this.type === "small") {
-        this.dotElements.forEach((dot) => dot.classList.remove('carousel__dot--selected'));
-        this.dotElements[this.currentSlide].classList.add('carousel__dot--selected');
+       this.selectCurrentDot();
     }
   }
 
@@ -140,6 +139,7 @@ class Carousel {
         dot.setAttribute('data-carousel-slide', i);
         this.dotElements.push(dot);
     }
+    this.selectCurrentDot();
     this.dotsWrapper.append(...this.dotElements);
     
     this.dotsWrapper.style.cssText = `--carousel-dot-color:${this.dotControlsColor}`;
@@ -149,40 +149,52 @@ class Carousel {
             this.dotsWrapper.style.left = "50%";
             this.dotsWrapper.style.transform = "translateX(-50%)";
             break;
-        case "top-right":
-        default:
-            this.dotsWrapper.style.top = "10%";
-            this.dotsWrapper.style.right = "10%";
-            break;
-    }
-    
-
+            case "top-right":
+                default:
+                    this.dotsWrapper.style.top = "10%";
+                    this.dotsWrapper.style.right = "10%";
+                    break;
+                }
+                
+                
     //attaching event listener
     this.dotsWrapper.addEventListener('click', ({target}) => {
         if (! target.classList.contains('carousel__dot') ) return;
+        clearTimeout(this.delayedAutoMove);
+        clearInterval(this.carouselInterval);
 
         this.currentSlide = +target.dataset.carouselSlide;
+        this.selectCurrentDot();
         
         this.carouselContent.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+        
+        this.delayedAutoMove = setTimeout(() => {
+            this.setAutoMove();
+          }, this.slideDuration * 2);
     });
 
     this.carouselElement.append(this.dotsWrapper);
 
   }
+
+  selectCurrentDot() {
+    this.dotElements.forEach((dot) => dot.classList.remove('carousel__dot--selected'));
+    this.dotElements[this.currentSlide].classList.add('carousel__dot--selected')
+  }
 }
 
-window.onload = () => {
-  const carousel1 = new Carousel({
-    id: "carousel1",
-    breakpoints: {
-        900: 3,
-        700: 2,
-        500: 1
-    },
-    interval: 3e3,
-    type: "large",
-    // dotControlsPosition: "bottom",
-    // dotControlsColor: "red"
-  });
-  console.log(carousel1);
-};
+// window.onload = () => {
+//   const carousel1 = new Carousel({
+//     id: "carousel1",
+//     breakpoints: {
+//         900: 3,
+//         700: 2,
+//         500: 1
+//     },
+//     interval: 3e3,
+//     type: "small",
+//     dotControlsPosition: "top-right",
+//     dotControlsColor: "red"
+//   });
+//   console.log(carousel1);
+// };
