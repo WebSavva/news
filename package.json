@@ -4,7 +4,8 @@
   "description": "news webbsite",
   "main": "index.js",
   "scripts": {
-    "sass-watch": "node-sass sass/main.scss css/style.css -w"
+    "sass-watch": "node-sass sass/main.scss css/style.css -w",
+    "carousel-sass-watch": "node-sass components/carousel/sass/carousel.scss components/carousel/css/carousel.css -w"
   },
   "author": "",
   "license": "ISC",
