@@ -1,0 +1,110 @@
+.gallery {
+    margin: 4rem 0;
+    padding-bottom: 4rem;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr repeat(3,1fr);
+    grid-template-rows: repeat(2, min-content);
+    &__card {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+        &--1 {
+            
+        }
+
+        &--2 {
+
+        }
+
+        &--3 {
+
+        }
+
+        &--4 {
+
+        }
+
+        &--5 {
+
+        }
+
+        &--6 {
+
+        }
+
+        &--7 {
+
+        }
+
+        &--8 {
+
+        }
+
+    }
+
+    &__carousel {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 2;
+        
+    }
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    &__img,
+    &__news-details {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    &__img {
+
+    }
+
+    &__news-details {
+        z-index: 10;
+        background-color: rgba(0, 0, 0, .3);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: $default-transition;
+        padding: 0 1.5rem;
+        overflow: hidden;
+        gap: 1rem;
+        &--large {
+            padding-bottom: 2rem;
+        }
+
+        &--small {
+            &:hover {
+                background-color: rgba(255, 255, 255, .8);
+            }
+        }
+    }
+
+    &__news-details--small:hover &__card-title {
+        color: $light-gray-color-1;
+    }
+
+    &__news-description {
+        font-size: 1.5rem;
+        font-style: 200;
+        color: darken($light-gray-color-2, 10%);
+        height: 0;
+        opacity: 0;
+        transition: $default-transition;
+        margin-bottom: 1rem;
+    }
+
+    &__card:hover  &__news-description {
+        opacity: 1;
+        height: 4rem;
+    }
+}
+
+
+

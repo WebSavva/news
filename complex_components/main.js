@@ -34,6 +34,11 @@ window.onload = () => {
                 500: 1
             }
         },
+        {
+            id: 'carousel-gallery',
+            type: 'small',
+            
+        },
     ];
 
     state.carousels = carouselConfigs.map((config) => new Carousel(config));

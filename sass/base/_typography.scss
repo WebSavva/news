@@ -2,13 +2,22 @@ html {
     font-size: 62.5%;
 }
 
+%heading {
+    text-transform: uppercase;
+    font-weight: 900;
+    transition: $default-transition
+}
+
 
 .heading-1 {
-
+    @extend %heading;
+    font-size: 3rem;
 }
 
 .heading-2 {
-    font-size: 1.6rem;
+    @extend %heading;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .heading-3 {

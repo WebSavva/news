@@ -26,14 +26,29 @@ button {
 html {
   font-size: 62.5%; }
 
+.heading-1, .heading-2 {
+  text-transform: uppercase;
+  font-weight: 900;
+  transition: all 0.3s; }
+
+.heading-1 {
+  font-size: 3rem; }
+
 .heading-2 {
-  font-size: 1.6rem; }
+  font-size: 1.5rem;
+  text-transform: uppercase; }
 
 .heading-3 {
   font-size: 1.3rem; }
 
 .p-small {
-  padding: 1rem; }
+  padding: 2rem !important; }
+
+.p-md {
+  padding: 2rem !important; }
+
+.p-md-r {
+  padding-right: 2rem !important; }
 
 .row {
   width: 114rem;
@@ -111,6 +126,7 @@ html {
   align-items: center; }
 
 .nav {
+  z-index: 10;
   position: sticky;
   top: 0;
   background: #FAFAFA;
@@ -248,31 +264,31 @@ html {
     font-size: 1.2rem;
     color: #777777; }
 
-[data-nav-item-color="red"] {
+[data-news-category="home"] {
   --current-color:#F44336; }
 
-[data-nav-item-color="light-blue"] {
+[data-news-category="world"] {
   --current-color:#33A3F1; }
 
-[data-nav-item-color="orange"] {
+[data-news-category="travel"] {
   --current-color:#F58021; }
 
-[data-nav-item-color="green"] {
+[data-news-category="video"] {
   --current-color:#74B430; }
 
-[data-nav-item-color="purple"] {
+[data-news-category="fashion"] {
   --current-color:#AA35D6; }
 
-[data-nav-item-color="light-brown"] {
+[data-news-category="food"] {
   --current-color:#D6AC1B; }
 
-[data-nav-item-color="blue"] {
+[data-news-category="sport"] {
   --current-color:#4C60F6; }
 
-[data-nav-item-color="light-green"] {
+[data-news-category="tech"] {
   --current-color:#32B47B; }
 
-[data-nav-item-color="brown"] {
+[data-news-category="features"] {
   --current-color:#AB632E; }
 
 .news-card {
@@ -303,6 +319,43 @@ html {
     font-size: 1.3rem;
     margin-right: .5rem; }
 
+.news-info {
+  display: flex;
+  gap: 1rem;
+  color: #aaaaaa;
+  font-size: 1.1rem; }
+  .news-info--light {
+    color: #aaaaaa; }
+  .news-info__published-date span, .news-info__comments-count span {
+    font-style: italic; }
+  .news-info__comments-count span {
+    transition: all 0.3s; }
+    .news-info__comments-count span:hover {
+      color: #ee3a3a; }
+  .news-info__icon {
+    font-size: 1.3rem;
+    margin-right: .5rem; }
+
+.news-link:link, .news-link:visited {
+  color: #fff; }
+
+.news-link:hover > * {
+  color: #ee3a3a !important; }
+
+.news-category-label:link, .news-category-label:visited {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  background: var(--current-color);
+  align-self: start;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s; }
+
+.news-category-label:hover {
+  opacity: .7; }
+
 .labels-set {
   display: flex; }
   .labels-set__item {
@@ -329,6 +382,57 @@ html {
     .labels-set__item:hover, .labels-set__item--selected {
       background: #F5D76E;
       color: #222222; }
+
+.gallery {
+  margin: 4rem 0;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr repeat(3, 1fr);
+  grid-template-rows: repeat(2, min-content); }
+  .gallery__card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%; }
+  .gallery__carousel {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2; }
+  .gallery__img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .gallery__img, .gallery__news-details {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1; }
+  .gallery__news-details {
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.3s;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    gap: 1rem; }
+    .gallery__news-details--large {
+      padding-bottom: 2rem; }
+    .gallery__news-details--small:hover {
+      background-color: rgba(255, 255, 255, 0.8); }
+  .gallery__news-details--small:hover .gallery__card-title {
+    color: #222222; }
+  .gallery__news-description {
+    font-size: 1.5rem;
+    font-style: 200;
+    color: #5e5e5e;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    margin-bottom: 1rem; }
+  .gallery__card:hover .gallery__news-description {
+    opacity: 1;
+    height: 4rem; }
 
 .carousel {
   position: relative;
@@ -358,8 +462,6 @@ html {
   .carousel__item {
     flex: 0 0 50%;
     padding: 0 1rem; }
-  .carousel__img {
-    width: 100%; }
   .carousel__dots-wrapper {
     position: absolute;
     display: flex;

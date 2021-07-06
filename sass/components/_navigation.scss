@@ -1,4 +1,5 @@
 .nav {
+    z-index: 10;
     position: sticky;
     top: 0;
     background: $ligt-gray-color-3;
@@ -219,38 +220,38 @@
     }
 }
 
-[data-nav-item-color="red"] {
+[data-news-category="home"] {
     --current-color:#F44336;
 }
 
-[data-nav-item-color="light-blue"] {
+[data-news-category="world"] {
     --current-color:#33A3F1;
 }
 
-[data-nav-item-color="orange"] {
+[data-news-category="travel"] {
     --current-color:#F58021;
 }
 
-[data-nav-item-color="green"] {
+[data-news-category="video"] {
     --current-color:#74B430;
 }
 
-[data-nav-item-color="purple"] {
+[data-news-category="fashion"] {
     --current-color:#AA35D6;
 }
 
-[data-nav-item-color="light-brown"] {
+[data-news-category="food"] {
     --current-color:#D6AC1B;
 }
 
-[data-nav-item-color="blue"] {
+[data-news-category="sport"] {
     --current-color:#4C60F6;
 }
 
-[data-nav-item-color="light-green"] {
+[data-news-category="tech"] {
     --current-color:#32B47B;
 }
 
-[data-nav-item-color="brown"] {
+[data-news-category="features"] {
     --current-color:#AB632E;
 }
