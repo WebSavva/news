@@ -1,5 +1,15 @@
 export default class Carousel {
-  constructor({type = "small", breakpoints = {}, interval = 3e3, id, dotControlsColor = "gray", dotControlsPosition = "top-right" } = {}) {
+  constructor({
+    type = "small",
+    breakpoints = {}, 
+    interval = 3e3, 
+    id,
+    style : {
+      dotControlsColor = "gray",
+      dotControlsPosition = {},
+      itemsGap = 0
+    } = {}
+ } = {}) {
     //initializaing the configuration 
     this.type = type
     
@@ -11,6 +21,7 @@ export default class Carousel {
     this.currentSlide = this.carouselStart;
     this.dotControlsColor = dotControlsColor;
     this.dotControlsPosition = dotControlsPosition;
+    this.itemsGap = itemsGap;
 
     this.carouselElement = document.getElementById(this.id);
     this.items = Array.from(
@@ -28,8 +39,9 @@ export default class Carousel {
     if ( this.type === "large" ) {
         window.onresize = () => {
             this.calculateSize();
-            this.moveContent("right");
+            this.switchSlide("right");
         };
+
     } else if ( this.type === "small" ) {
         this.setUpDotControls();
     }
@@ -41,70 +53,80 @@ export default class Carousel {
       })
     );
 
-
+    this.setItemsPosition();
     this.setAutoMove();
   }
 
-  moveContent(direction = this.currentDirection) {
-    let fastMove = false;
-    if (direction === "left") {
-      if (this.currentSlide === this.carouselStart) {
-        this.currentSlide = this.carouselEnd;
-        fastMove = true;
-      } else {
-        this.currentSlide--;
-      }
-    } else {
-      if (this.currentSlide === this.carouselEnd) {
-        this.currentSlide = this.carouselStart;
-        fastMove = true;
-      } else {
-        this.currentSlide++;
-      }
-    }
 
-    if (fastMove) {
-      this.carouselContent.style.transition = "all 1s";
-    } else {
-      this.carouselContent.style.transition = "";
-    }
+  //SWITCHING SLIDE FUNCTIONALITY
+  switchSlide(direction = this.currentDirection) {
+    let prevSlideNumber = this.currentSlide;
+    this.changeCurrentSlideNumber(direction);
 
-    this.carouselContent.style.transform = `translateX(-${
-      this.currentSlide * (100 / this.itemsPerSlide)
-    }%)`;
-
+    
     if (this.type === "small") {
-       this.selectCurrentDot();
+      this.selectCurrentDot();
+      this.items[prevSlideNumber].style.opacity = 0;
+      this.items[this.currentSlide].style.opacity = 1;
+    } else if (this.type === "large") {
+      this.carouselContent.style.transform = `translateX(-${
+        this.currentSlide * (100 / this.itemsPerSlide)
+      }%)`;
     }
   }
 
+    changeCurrentSlideNumber(direction) {
+      let fastMove = false;
+      if (direction === "left") {
+        if (this.currentSlide === this.carouselStart) {
+          this.currentSlide = this.carouselEnd;
+          fastMove = true;
+        } else {
+          this.currentSlide--;
+        }
+      } else {
+        if (this.currentSlide === this.carouselEnd) {
+          this.currentSlide = this.carouselStart;
+          fastMove = true;
+        } else {
+          this.currentSlide++;
+        }
+      }
+    
+      if (fastMove) {
+        this.carouselContent.style.transition = "all 1s";
+      } else {
+        this.carouselContent.style.transition = "";
+      }
+  }
+  
   controlClickHandle(target) {
       
     const currentControl = target.closest("[data-carousel-target]");
-      
+    
     if (!currentControl) return;
-      
+    
     clearTimeout(this.delayedAutoMove);
     clearInterval(this.carouselInterval);
     const moveDirection = currentControl.dataset.carouselDirection;
-
-    this.moveContent(moveDirection);
-
+    
+    this.switchSlide(moveDirection);
+    
     this.delayedAutoMove = setTimeout(() => {
       this.setAutoMove();
     }, this.slideDuration * 2);
   }
-
+  
   setAutoMove() {
     this.carouselInterval = setInterval(() => {
       if (this.currentSlide === this.carouselStart)
-        this.currentDirection = "right";
+      this.currentDirection = "right";
       if (this.currentSlide === this.carouselEnd)
-        this.currentDirection = "left";
-      this.moveContent();
+      this.currentDirection = "left";
+      this.switchSlide();
     }, this.slideDuration);
   }
-
+  
   calculateSize() {
     
     let currentBreakpoint;
@@ -113,20 +135,29 @@ export default class Carousel {
         currentBreakpoint = breakpoint;
       }
     }
-
+    
     if (this.type === "large") {
-        this.itemsPerSlide = this.breakpoints[currentBreakpoint];
-        this.carouselEnd = this.itemsNumber - this.itemsPerSlide;
+      this.itemsPerSlide = this.breakpoints[currentBreakpoint];
+      this.carouselEnd = this.itemsNumber - this.itemsPerSlide;
+      this.carouselContent.classList.add('carousel__content--large');
     } else if (this.type === "small") {
-        this.itemsPerSlide = 1;
-        this.carouselEnd = this.itemsNumber - 1;
+      this.itemsPerSlide = 1;
+      this.carouselEnd = this.itemsNumber - 1;
+      this.carouselContent.classList.add('carousel__content--small');
     }
 
+  }
+  setItemsPosition() {
     this.items.forEach(
-      (item) => (item.style.flex = `0 0 ${100 / this.itemsPerSlide}%`)
+      (item) => {
+        if (this.type === "large") {
+          item.style.cssText = `flex: 0 0 ${100 / this.itemsPerSlide}%; padding: 0 ${this.itemsGap}rem`; 
+        } else if (this.type === "small") {
+          item.classList.add('carousel__item--small');
+        }
+      }
     );
   }
-
   setUpDotControls() {
     //creating elements
     this.dotsWrapper = document.createElement('div');
@@ -141,21 +172,9 @@ export default class Carousel {
     }
     this.selectCurrentDot();
     this.dotsWrapper.append(...this.dotElements);
-    
-    this.dotsWrapper.style.cssText = `--carousel-dot-color:${this.dotControlsColor}`;
-    switch (this.dotControlsPosition) {
-        case "bottom":
-            this.dotsWrapper.style.bottom = "10%";
-            this.dotsWrapper.style.left = "50%";
-            this.dotsWrapper.style.transform = "translateX(-50%)";
-            break;
-            case "top-right":
-                default:
-                    this.dotsWrapper.style.top = "10%";
-                    this.dotsWrapper.style.right = "10%";
-                    break;
-                }
-                
+    let dotsWrapperStyle = `--carousel-dot-color:${this.dotControlsColor};`;
+    dotsWrapperStyle += Object.entries(this.dotControlsPosition).reduce((styledPosition,[posName, posValue]) => styledPosition += `${posName}:${posValue}rem;`, dotsWrapperStyle);
+    this.dotsWrapper.style.cssText = dotsWrapperStyle;
                 
     //attaching event listener
     this.dotsWrapper.addEventListener('click', ({target}) => {
@@ -163,10 +182,13 @@ export default class Carousel {
         clearTimeout(this.delayedAutoMove);
         clearInterval(this.carouselInterval);
 
+        let prevSlideNumber = this.currentSlide;
+        this.items[prevSlideNumber].style.opacity = 0;
+        
         this.currentSlide = +target.dataset.carouselSlide;
         this.selectCurrentDot();
         
-        this.carouselContent.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+        this.items[this.currentSlide].style.opacity = 1;
         
         this.delayedAutoMove = setTimeout(() => {
             this.setAutoMove();
@@ -182,19 +204,3 @@ export default class Carousel {
     this.dotElements[this.currentSlide].classList.add('carousel__dot--selected')
   }
 }
-
-// window.onload = () => {
-//   const carousel1 = new Carousel({
-//     id: "carousel1",
-//     breakpoints: {
-//         900: 3,
-//         700: 2,
-//         500: 1
-//     },
-//     interval: 3e3,
-//     type: "small",
-//     dotControlsPosition: "top-right",
-//     dotControlsColor: "red"
-//   });
-//   console.log(carousel1);
-// };

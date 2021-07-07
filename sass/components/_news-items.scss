@@ -12,15 +12,18 @@
 .news-info {
     display: flex;
     gap: 1rem;
-    color: lighten($light-gray-color-2, 20%);
+    color: lighten($light-gray-color-2, 40%);
     font-size: 1.1rem;
     font-style: italic;
-    &--light {
-        color: lighten($light-gray-color-2, 20%);
+    &--large {
+        font-size: 1.3rem;
     }
     &__details {
         display: flex;
-        align-items: center;
+        align-items: baseline;
+        &--dark {
+            color: lighten($light-gray-color-2, 20%);
+        }
         &--hoverable {
             cursor: pointer;
             & > * {

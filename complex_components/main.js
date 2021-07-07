@@ -2,7 +2,7 @@ import Carousel from './carousel/script/carousel';
 
 const state = {};
 window.onload = () => {
-
+    
     const carouselConfigs = [
         {
             id: 'carousel-world',
@@ -12,6 +12,9 @@ window.onload = () => {
                 800: 3,
                 600: 2,
                 500: 1
+            },
+            style: {
+                itemsGap:1,
             }
         },
         {
@@ -22,6 +25,9 @@ window.onload = () => {
                 800: 3,
                 600: 2,
                 500: 1
+            },
+            style: {
+                itemsGap:1,
             }
         },
         {
@@ -32,13 +38,22 @@ window.onload = () => {
                 800: 3,
                 600: 2,
                 500: 1
+            },
+            style: {
+                itemsGap:1,
             }
         },
         {
             id: 'carousel-gallery',
             type: 'small',
-            dotControlsColor: "#fff",
-            
+            style: {
+                dotControlsColor: "#fff",
+                itemsGap: 0,
+                dotControlsPosition: {
+                    top: 2,
+                    right: 2
+                }
+            }
         },
     ];
 
