@@ -37,6 +37,7 @@ window.onload = () => {
         {
             id: 'carousel-gallery',
             type: 'small',
+            dotControlsColor: "#fff",
             
         },
     ];

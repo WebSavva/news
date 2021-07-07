@@ -50,15 +50,18 @@
 
     &__dots-wrapper {
         position: absolute;
-        display: flex;
-        z-index: 10;
+        z-index: 35;
     }
 
     &__dot {
-        background-color: #fff;
-        width: .8rem;
-        height: .8rem;
-        border-radius: 100px;
+        display: inline-block;
+        background-color: transparent;
+        border-width: 2px;
+        border-style: solid;
+        border-color:#fff;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
         transition: all .4s;
         &:not(:last-child) {
             margin-right: 1rem;
