@@ -1,11 +1,42 @@
+%bordered-bottom {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: .5px;
+    width: 100%;
+}
+
 .p-small {
     padding: 2rem !important;
 }
 
 .p-md {
-    padding: 2rem !important;
+    padding: 3rem !important;
 }
 
 .p-md-r {
     padding-right: 2rem !important;
+}
+
+.overlay-border {
+    position: relative;
+    
+    
+    & > * {
+        padding-bottom: 1rem;
+    }
+
+    &::after {
+        @extend %bordered-bottom;
+        background-color:lighten($light-gray-color-2, 10%);
+    }
+
+    &--custom {
+        &::after {
+            background-color:  var(--current-color);
+            height: 1px;
+            z-index: 10;
+        }
+    }
 }

@@ -1,4 +1,4 @@
-import Carousel from './carousel/script/carousel';
+import buildCarousel from './carousel/script/buildCarousel';
 
 const state = {};
 window.onload = () => {
@@ -14,7 +14,7 @@ window.onload = () => {
                 500: 1
             },
             style: {
-                itemsGap:1,
+                itemsGap:10,
             }
         },
         {
@@ -27,7 +27,7 @@ window.onload = () => {
                 500: 1
             },
             style: {
-                itemsGap:1,
+                itemsGap:10,
             }
         },
         {
@@ -40,7 +40,7 @@ window.onload = () => {
                 500: 1
             },
             style: {
-                itemsGap:1,
+                itemsGap:10,
             }
         },
         {
@@ -50,13 +50,13 @@ window.onload = () => {
                 dotControlsColor: "#fff",
                 itemsGap: 0,
                 dotControlsPosition: {
-                    top: 2,
-                    right: 2
+                    top: 20,
+                    right: 20
                 }
             }
         },
     ];
 
-    state.carousels = carouselConfigs.map((config) => new Carousel(config));
+    state.carousels = carouselConfigs.map((config) => buildCarousel(config));
     
 }
