@@ -16,10 +16,16 @@ html {
 
 .heading-2 {
     @extend %heading;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
-.heading-3 {
-    font-size: 1.3rem;
+.heading-4 {
+    @extend %heading;
+    font-size: 1.4rem;
+}
+
+.heading-5 {
+    @extend %heading;
+    font-size: 1.2rem;
 }

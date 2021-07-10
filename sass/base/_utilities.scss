@@ -29,7 +29,7 @@
 
     &::after {
         @extend %bordered-bottom;
-        background-color:lighten($light-gray-color-2, 10%);
+        background-color:lighten($light-gray-color-2, 35%);
     }
 
     &--custom {
