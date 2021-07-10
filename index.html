@@ -876,24 +876,24 @@
         </div>
     </section>
     <!-- NEWS TICKER -->
-    <section class="news-ticker">
-        <div class="row news-ticker__content">
-            <span class="news-ticker__breaking-news-label">Breaking News</span>
-            <span class="news-ticker__new-label">New</span>
-            <div class="news-ticker__line">
-                <span class="news-ticker__news-time">12:40 pm</span>
-                <a href="#" class="news-ticker__news-heading news-link news-link--alt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit deserunt nesciunt eum quia quasi.z</a>
-                <div class="news-ticker__controls">
-                    <button class="news-ticker__control-btn new-ticker__stop-control">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="news-ticker__control-btn new-ticker__stop-previous">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button class="news-ticker__control-btn new-ticker__stop-next">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
+    <section class="news-sticker" id="head-news-sticker">
+        <div class="row news-sticker__content">
+            <span class="news-sticker__breaking-news-label">Breaking News</span>
+            <span class="news-sticker__new-label">New</span>
+            <div class="news-sticker__line">
+                <span class="news-sticker__news-time">12:40 pm</span>
+                <a href="#" class="news-sticker__news-heading news-link news-link--alt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit deserunt nesciunt eum quia quasi.z</a>
+            </div>
+            <div class="news-sticker__controls">
+                <button class="news-sticker__control-btn new-ticker__stop-control" data-news-sticker-command="play">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button class="news-sticker__control-btn new-ticker__stop-previous" data-news-sticker-command="backward">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="news-sticker__control-btn new-ticker__stop-next" data-news-sticker-command="forward">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>

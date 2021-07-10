@@ -1,0 +1,66 @@
+.news-sticker {
+    padding-bottom: 3rem;
+    &__content {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__breaking-news-label {
+        @extend %label;
+        background: $light-red;
+        padding: .7rem 1rem;
+    }
+
+    &__line {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        opacity: 0;
+    }
+
+    &__new-label {
+        @extend %label;
+        background: $dark-gray-color;
+        font-size: .9rem;
+        padding: .4rem;
+        margin: 0 1rem;
+    }
+
+    &__news-time {
+        color: $light-red;
+        margin-right: 1rem;
+    }
+
+    &__news-heading {
+        font-weight: 800;
+        font-size: 1.3rem;
+        flex: 1;
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        gap: .3rem;
+    }
+
+    &__control-btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        font-size: .8rem;
+        width: 2rem;
+        height: 2rem;
+        color: $light-gray-color-2;
+        border: 1px solid currentColor;
+        transition: $default-transition;
+        aspect-ratio: 1 / 1;
+        &:hover {
+            background: $light-red;
+            color: #fff;
+        }
+    }
+}

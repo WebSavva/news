@@ -1,5 +1,6 @@
 import buildCarousel from './carousel/script/buildCarousel';
-
+import NewsSticker from './news-sticker/script/NewsSticker';
+import NewsSicker from './news-sticker/script/NewsSticker'
 const state = {};
 window.onload = () => {
     
@@ -56,7 +57,27 @@ window.onload = () => {
             }
         },
     ];
+    const newsStickerContent = [
+        {
+            id: "head-news-sticker",
+            data: [
+                {
+                    time: "13:50 pm",
+                    text: "One of the most aniticipated events of this year is being held right now in London. Check it out!"
+                },
+                {
+                    time: "9:00 am",
+                    text: "The Amazon CEO Jeff Bezoss is currently considering leaving the office. He's been working in that capacity since 1990s."
+                },
+                {
+                    time: "8:30 pm",
+                    text: "Joe Biden to hold the press-conference in the wake of the ongoing crisis."
+                },
+            ]
+        }
+    ];
 
     state.carousels = carouselConfigs.map((config) => buildCarousel(config));
+    state.newsStickers = newsStickerContent.map((newsData) => new NewsSticker(newsData));
     
 }
