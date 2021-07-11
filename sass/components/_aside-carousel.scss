@@ -1,0 +1,28 @@
+.aside-carousel {
+    margin-top: 1rem;
+    position: relative;
+    &__control {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: min-content;
+        padding: 0 1rem;
+        background: rgba(0 , 0, 0, .3);
+        color: #fff;
+        transition: $default-transition;
+        z-index: 10;
+        cursor: pointer;
+        backface-visibility: hidden;
+        &:hover {
+            background: $light-red;
+        }
+        &--right {
+            right: 0;
+        }
+        
+        &--left {
+            left: 0;
+
+        }
+    }
+}

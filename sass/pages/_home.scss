@@ -1,0 +1,27 @@
+.full-page-carousel-wrapper {
+    padding: 2rem 0;
+    background: $ligt-gray-color-3;
+    border-top: $light-gray-border;
+    border-bottom: $light-gray-border;
+}
+
+.main{
+    
+    &__content {
+        display: flex;
+        & > * {
+            padding: 3rem 0;
+        }
+    }
+}
+
+.main-news {
+    flex: 4;
+    border-right: .5px solid lighten($light-gray-color-2, 45%);
+    padding-right: 2rem;
+}
+
+.aside {
+    padding-left: 2rem;
+    flex:  2;
+}

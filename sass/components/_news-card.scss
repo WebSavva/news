@@ -1,37 +1,88 @@
 .news-card {
-    height: 100%;
     &--vertical {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+    &--centered {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: min-content;
+    }
 
+    &--horizontal {
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1px solid rgba($light-gray-color-2, .15);
+        padding-bottom: 1rem;
+    }
+
+    &--horizontal &__title {
+        margin: 0 0 1rem 0;
+    }
+    &--horizontal &__img-wrapper {
+        flex:  0 0 30%;
+    }
+    &--centered  &__body {
+       grid-row: 1/ -1;
+       grid-column: 1/ -1;
+       justify-self: center;
+       align-self: center;
+       z-index: 3;
+       max-width: 80%;
+       text-align: center;
+    }
+    &--horizontal &__body {
+        padding-bottom: 2rem;
+    }
+    
+    &--horizontal &__img {
+        height: 100%;
+        aspect-ratio: 3 / 2;
+    }
+    
+    
+    &--centered  &__img-wrapper {
+        grid-row: 1/ -1;
+        grid-column: 1/ -1;
+    }
+    &__img-wrapper {
+        position: relative;
+    }
+    
+    
+    
     &__img {
+        display: block;
         width: 100%;
     }
-
+    
+    &__label-category {
+        position: absolute;
+        bottom: 10%;
+        left: 5%;
+        z-index: 3;
+    }
     &__title {
-        font-size: 1.3rem;
         text-transform: initial;
-        word-break: break-all;
         margin: 1rem 0;
     }
-
+    
     &__info {
         display: flex;
         gap: 1rem;
         color: lighten($light-gray-color-2, 20%);
         font-size: 1.1rem;
     }
-
+    
     &__published-date,
     &__comments-count{
         span {
             font-style: italic;
         }
     }
-
-
+    
+    
     &__comments-count {
         span {
             transition: $default-transition;
@@ -40,9 +91,28 @@
             }
         }
     }
-
+    
     &__icon {
         font-size: 1.3rem;
         margin-right: .5rem;
     }
+
+    &--overlay {
+        position: relative;
+    }
+    &__body {
+        &--overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .5);
+            padding: 1rem 1.5rem; 
+            width: 100%;
+            transition: $default-transition;
+            &:hover {
+                background: rgba(0, 0, 0, .8);
+            }
+        }
+    }
 }
+

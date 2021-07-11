@@ -8,6 +8,7 @@ export default class SmallCarousel extends Carousel {
             style: {
                 dotControlsPosition: this.dotControlsPosition = {},
                 dotControlsColor: this.dotControlsColor = '#fff',
+                dotControlsCentered: this.dotControlsCentered = false,
             }
         } = config);
 
@@ -50,7 +51,10 @@ export default class SmallCarousel extends Carousel {
         this.selectCurrentDot();
 
         let dotsWrapperStyle = `--carousel-dot-color:${this.dotControlsColor};`;
-        dotsWrapperStyle += Object.entries(this.dotControlsPosition).reduce((styledPosition,[posName, posValue]) => styledPosition += `${posName}:${posValue / 10 }rem;`, dotsWrapperStyle);
+        dotsWrapperStyle += Object.entries(this.dotControlsPosition).reduce((styledPosition,[posName, posValue]) => styledPosition += `${posName}:${posValue};`, dotsWrapperStyle);
+        if (this.dotControlsCentered) {
+            dotsWrapperStyle += 'transform: translateX(-50%);';
+        }
         this.dotsWrapper.style.cssText = dotsWrapperStyle;
         this.dotsWrapper.addEventListener('click', this.handleDotControlClick.bind(this));
         this.carouselElement.append(this.dotsWrapper);

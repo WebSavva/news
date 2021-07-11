@@ -1,0 +1,29 @@
+.subscribe {
+    padding: 2rem;
+    background-color: rgba($dark-gray-color, .95);
+
+    &__input-control {
+        margin: 1rem 0;
+        display: flex;
+    }
+
+    &__input {
+        margin-right: 1rem;
+        padding: 1rem;
+        font-size: 1.2rem;
+        flex: 1;
+        color: $light-gray-color-2;
+    }
+
+    &__submit-btn {
+        color: $light-red;
+        i {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        color: rgba($ligt-gray-color-3,.4);
+    }
+}

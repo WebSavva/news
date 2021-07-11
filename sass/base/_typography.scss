@@ -5,8 +5,10 @@ html {
 %heading {
     text-transform: uppercase;
     font-weight: 900;
-    transition: $default-transition
+    transition: $default-transition;
 }
+
+
 
 
 .heading-1 {
@@ -17,7 +19,11 @@ html {
 .heading-2 {
     @extend %heading;
     font-size: 2rem;
-    text-transform: uppercase;
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.7rem;
 }
 
 .heading-4 {
@@ -28,4 +34,32 @@ html {
 .heading-5 {
     @extend %heading;
     font-size: 1.2rem;
+}
+
+.heading-6 {
+    @extend %heading;
+    font-size: .9rem;
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+    &--dark {
+        @include modifiedHeading(dark);
+    }
+    
+    &--light {
+        @include modifiedHeading(light);
+    }
+
+    &--white {
+        @include modifiedHeading(white);
+    }
+
+    &--expanded {
+        letter-spacing: .1rem;
+    }
 }

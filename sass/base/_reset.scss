@@ -6,10 +6,19 @@ a {
     &:link,
     &:visited {
         text-decoration: none;
+        color: unset;
     }
 }
 
 button {
     border: none;
     background: none;
+}
+
+input {
+    border: none;
+    &:focus {
+        border: none;
+        outline: none;
+    }
 }

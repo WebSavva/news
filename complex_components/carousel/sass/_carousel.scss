@@ -17,16 +17,23 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             border: $light-gray-border;
-            background: #fff;
+            background-color: #fff;
             display: inline-flex;
             align-items: start;
             justify-content: center;
+            cursor: pointer;
+            color: lighten($light-gray-color-2, 20%);
+            transition: $default-transition;
+            &:hover {
+                background-color: $light-red;
+                color: #fff;
+            }
         }
     }
     &__control-icon {
         &--external {
             font-size: .8rem;
-            color: lighten($light-gray-color-2, 20%);
+            color: currentColor;
         }
     }
 

@@ -21,22 +21,47 @@
 
 .overlay-border {
     position: relative;
-    
+    backface-visibility: hidden;
     
     & > * {
         padding-bottom: 1rem;
     }
-
+    
+    & > [class*="heading"] {
+        width: max-content;
+    }
+    
     &::after {
+        backface-visibility: hidden;
         @extend %bordered-bottom;
         background-color:lighten($light-gray-color-2, 35%);
     }
 
-    &--custom {
+    &--custom, 
+    &--red {
         &::after {
-            background-color:  var(--current-color);
             height: 1px;
             z-index: 10;
         }
     }
+    
+    &--custom {
+        &::after {
+            background-color:  var(--current-color);
+        }
+    }
+
+    &--red {
+        &::after {
+            background-color:  $light-red;
+        }
+    }
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.element-container {
+    margin: 3rem 0;
 }

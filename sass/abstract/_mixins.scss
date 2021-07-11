@@ -12,3 +12,17 @@
         }
     }
 }
+
+@mixin modifiedHeading($type) {
+    @if $type == dark {
+        color: $light-gray-color-1;
+    }
+
+    @if $type == light {
+        color: $light-gray-color-2;
+    }
+
+    @if $type == white {
+        color: #fff;
+    }
+}

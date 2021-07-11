@@ -14,7 +14,7 @@
 <body>
     <header class="header">
         <div class="header__info">
-            <div class="row">
+            <div class="container">
                 <div class="header__info-content">
                     <ul class="header__info-list header__info-li">
                         <li class="header__info-item header__info-location">
@@ -62,7 +62,7 @@
         </div>
 
         <div class="header__img-box">
-            <div class="row">
+            <div class="container">
                 <div class="header__img-box-content">
                     <img src="img/header-logo.png" alt="Header logo" class="header__logo">
                     <div class="ad-block">
@@ -74,7 +74,7 @@
         </div>
     </header>
         <nav class="nav">
-            <div class="row">
+            <div class="container">
                 <div class="nav__content">
                     <ul class="nav__menu">
                         <li class="nav__item nav__dropdown-container nav__dropdown-container--small" data-news-category="home">
@@ -121,7 +121,7 @@
                             World <i class="fas fa-chevron-down nav__chevron-icon-down"></i>
                             </a>
                             <div class="nav__dropdown nav__dropdown--vertical">
-                                <div class="row nav__dropdown--world">
+                                <div class="container nav__dropdown--world">
                                     <ul class="nav__world-list">
                                         <li class="nav__world-item">All</li>
                                         <li class="nav__world-item">Politics</li>
@@ -148,7 +148,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img1.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -164,7 +164,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img2.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -180,7 +180,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img3.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -196,7 +196,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img4.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -212,7 +212,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img5.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -237,16 +237,16 @@
                             Travel <i class="fas fa-chevron-down nav__chevron-icon-down"></i>
                             </a>
                             <div class="nav__dropdown nav__dropdown--vertical">
-                                <div class="row p-md">
+                                <div class="container p-md">
                                         <div class="carousel__head overlay-border">
                                             <h3 class="heading-5 overlay-border overlay-border--custom">Latest Posts</h3>
                                             <div class="carousel__controls carousel__controls">
-                                                <span data-carousel-target="carousel-travel" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
+                                                <button data-carousel-target="carousel-travel" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
                                                     <i class="fas fa-chevron-left carousel__control-icon--external"></i>
-                                                </span>
-                                                <span class="carousel__btn carousel__btn--external" data-carousel-target="carousel-travel" data-carousel-direction="right">
+                                                </button>
+                                                <button class="carousel__btn carousel__btn--external" data-carousel-target="carousel-travel" data-carousel-direction="right">
                                                     <i class="fas fa-chevron-right carousel__control-icon--external"></i>
-                                                </span>
+                                                </button>
                                             </div>
                                         </div>
                                         <div class="carousel" id="carousel-travel">
@@ -255,7 +255,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img1.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -271,7 +271,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img2.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -287,7 +287,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img3.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -303,7 +303,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img4.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -319,7 +319,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img5.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -343,7 +343,7 @@
                             Tech <i class="fas fa-chevron-down nav__chevron-icon-down"></i>
                             </a>
                             <div class="nav__dropdown nav__dropdown--vertical">
-                                <div class="row p-md">
+                                <div class="container p-md">
                                         <div class="carousel__head">
                                             <div class="labels-set">
                                                 <span class="labels-set__item labels-set__item--selected">All</span>
@@ -366,7 +366,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img1.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -382,7 +382,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img2.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -398,7 +398,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img3.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nostrum culpa est.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -414,7 +414,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img4.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, doloribus! Nesciunt, blanditiis!</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -430,7 +430,7 @@
                                                     <div class="carousel__item">
                                                         <div class="news-card news-card--vertical">
                                                             <img src="img/world-img5.jpg" class="news-card__img">
-                                                            <h5 class="news-card__title">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
+                                                            <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing.</h5>
                                                             <div class="news-info">
                                                                 <div class="news-info__details news-info__details--dark">
                                                                     <i class="fas fa-clock news-info__icon"></i>
@@ -665,14 +665,14 @@
                                     <a href="#" class="news-category-label" data-news-category="sport">Sport</a>
                                     <a href="#" class="news-link">
                                         <h1 class="heading-1 gallery__card-title p-md-r">Lorem ipsum dolor sit amet.</h1>
-                                    </a>
-                                    <div class="news-info news-info--large">
-                                        <div class="news-info__details">
-                                            <i class="far fa-clock news-info__icon"></i>
-                                            <span>7 December 2021</span>
+                                        <div class="news-info news-info--large">
+                                            <div class="news-info__details">
+                                                <i class="far fa-clock news-info__icon"></i>
+                                                <span>7 December 2021</span>
                                         </div>
                                         <div class="news-info__details news-info__details--hoverable">
                                             <i class="fas fa-user news-info__icon"></i>
+                                        </a>
                                             <small>by</small><span>Felix Dunkan</span>
                                         </div>
                                         <div class="news-info__details news-info__details--hoverable">
@@ -877,7 +877,7 @@
     </section>
     <!-- NEWS TICKER -->
     <section class="news-sticker" id="head-news-sticker">
-        <div class="row news-sticker__content">
+        <div class="container news-sticker__content">
             <span class="news-sticker__breaking-news-label">Breaking News</span>
             <span class="news-sticker__new-label">New</span>
             <div class="news-sticker__line">
@@ -897,7 +897,978 @@
             </div>
         </div>
     </section>
-    <!-- FILTER -->
+    <!-- FULL PAGE CAROUSEL WITH NEWS CARDS  -->
+    <section class="full-page-carousel-wrapper">
+        <div class="container">
+            <div class="carousel__head overlay-border">
+                <h3 class="heading-3 heading-3--dark heading-3--expanded overlay-border overlay-border--red">Today's Features</h3>
+                <div class="carousel__controls carousel__controls">
+                    <span data-carousel-target="carousel-full-page" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
+                        <i class="fas fa-chevron-left carousel__control-icon--external"></i>
+                    </span>
+                    <span class="carousel__btn carousel__btn--external" data-carousel-target="carousel-full-page" data-carousel-direction="right">
+                        <i class="fas fa-chevron-right carousel__control-icon--external"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="carousel" id="carousel-full-page">
+                <div class="carousel__view">
+                    <div class="carousel__content">
+                        <div class="carousel__item">
+                            <div class="news-card news-card--vertical">
+                                <div class="news-card__img-wrapper">
+                                    <img src="img/world-img1.jpg" class="news-card__img">
+                                    <a href="#" class="news-category-label news-card__label-category" data-news-category="sport">Sport</a>
+                                </div>
+                                <div class="card-news__body">
+                                    <a href="#" class="news-link news-link--alt">
+                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatum!</h5>
+                                    </a>
+                                    <div class="news-info">
+                                        <div class="news-info__details news-info__details--dark">
+                                            <i class="fas fa-clock news-info__icon"></i>
+                                            <span>27 May 2013</span>
+                                        </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                <i class="fas fa-user news-info__icon"></i>
+                                                <small>by</small><span>John Doe</span>
+                                            </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                            <i class="fas fa-comment news-info__icon"></i>
+                                            <span>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="news-card news-card--vertical">
+                                <div class="news-card__img-wrapper">
+                                    <img src="img/world-img2.jpg" class="news-card__img">
+                                    <a href="#" class="news-category-label news-card__label-category" data-news-category="travel">Travel</a>
+                                </div>
+                                <a href="#" class="news-link news-link--alt">
+                                    <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam?</h5>
+                                </a>
+                                <div class="news-info">
+                                    <div class="news-info__details news-info__details--dark">
+                                        <i class="fas fa-clock news-info__icon"></i>
+                                        <span>27 May 2013</span>
+                                    </div>
+                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                            <i class="fas fa-user news-info__icon"></i>
+                                            <small>by</small><span>John Doe</span>
+                                        </div>
+                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                        <i class="fas fa-comment news-info__icon"></i>
+                                        <span>23</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="news-card news-card--vertical">
+                                <div class="news-card__img-wrapper">
+                                    <img src="img/world-img4.jpg" class="news-card__img">
+                                    <a href="#" class="news-category-label news-card__label-category" data-news-category="food">Food</a>
+                                </div>
+                                <div class="card-news__body">
+                                    <a href="#" class="news-link news-link--alt">
+                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis totam cupiditate error enim!</h5>
+                                    </a>
+                                    <div class="news-info">
+                                        <div class="news-info__details news-info__details--dark">
+                                            <i class="fas fa-clock news-info__icon"></i>
+                                            <span>27 May 2013</span>
+                                        </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                <i class="fas fa-user news-info__icon"></i>
+                                                <small>by</small><span>John Doe</span>
+                                            </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                            <i class="fas fa-comment news-info__icon"></i>
+                                            <span>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="news-card news-card--vertical">
+                                <div class="news-card__img-wrapper">
+                                    <img src="img/world-img4.jpg" class="news-card__img">
+                                    <a href="#" class="news-category-label news-card__label-category" data-news-category="video">Video</a>
+                                </div>
+                                <div class="card-news__body">
+                                    <a href="#" class="news-link news-link--alt">
+                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae?</h5>
+                                    </a>
+                                    <div class="news-info">
+                                        <div class="news-info__details news-info__details--dark">
+                                            <i class="fas fa-clock news-info__icon"></i>
+                                            <span>27 May 2013</span>
+                                        </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                <i class="fas fa-user news-info__icon"></i>
+                                                <small>by</small><span>John Doe</span>
+                                            </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                            <i class="fas fa-comment news-info__icon"></i>
+                                            <span>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel__item">
+                            <div class="news-card news-card--vertical">
+                                <div class="news-card__img-wrapper">
+                                    <img src="img/world-img5.jpg" class="news-card__img">
+                                    <a href="#" class="news-category-label news-card__label-category" data-news-category="features">Features</a>
+                                </div>
+                                <div class="card-news__body">
+                                    <a href="#" class="news-link news-link--alt">
+                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam obcaecati error vitae enim.</h5>
+                                    </a>
+                                    <div class="news-info">
+                                        <div class="news-info__details news-info__details--dark">
+                                            <i class="fas fa-clock news-info__icon"></i>
+                                            <span>27 May 2013</span>
+                                        </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                <i class="fas fa-user news-info__icon"></i>
+                                                <small>by</small><span>John Doe</span>
+                                            </div>
+                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                            <i class="fas fa-comment news-info__icon"></i>
+                                            <span>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </section>
+    <main class="main">
+        <div class="container main__content">
+            <section class="main-news">
+                <div class="element-container">
+                        <div class="carousel__head overlay-border" data-news-category="world">
+                            <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--custom">World</h4>
+                            <div class="carousel__controls carousel__controls">
+                                <button data-carousel-target="carousel-news-columns" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
+                                    <i class="fas fa-chevron-left carousel__control-icon--external"></i>
+                                </button>
+                                <button class="carousel__btn carousel__btn--external" data-carousel-target="carousel-news-columns" data-carousel-direction="right">
+                                    <i class="fas fa-chevron-right carousel__control-icon--external"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="carousel" id="carousel-news-columns">
+                            <div class="carousel__view">
+                                <div class="carousel__content">
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--centered">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/small-img2.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--centered">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+                                                    </a>
+                                                    <div class="news-info news-info--centered">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>21 January 2021</span>
+                                                        </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                                <i class="fas fa-user news-info__icon"></i>
+                                                                <small>by</small><span>John Doe</span>
+                                                            </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-comment news-info__icon"></i>
+                                                            <span>23</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list6.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list9.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--centered">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/small-img1.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--centered">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet.</h3>
+                                                    </a>
+                                                    <div class="news-info news-info--centered">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                                <i class="fas fa-user news-info__icon"></i>
+                                                                <small>by</small><span>John Doe</span>
+                                                            </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-comment news-info__icon"></i>
+                                                            <span>23</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list6.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list9.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--centered">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/small-img3.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--centered">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet consectetur.</h3>
+                                                    </a>
+                                                    <div class="news-info news-info--centered">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                                <i class="fas fa-user news-info__icon"></i>
+                                                                <small>by</small><span>John Doe</span>
+                                                            </div>
+                                                        <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-comment news-info__icon"></i>
+                                                            <span>23</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list4.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic!</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list9.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="carousel__head overlay-border">
+                        <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--red">Gallery</h4>
+                        <div class="carousel__controls carousel__controls">
+                            <button data-carousel-target="carousel-overlay-cards" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
+                                <i class="fas fa-chevron-left carousel__control-icon--external"></i>
+                            </button>
+                            <button class="carousel__btn carousel__btn--external" data-carousel-target="carousel-overlay-cards" data-carousel-direction="right">
+                                <i class="fas fa-chevron-right carousel__control-icon--external"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel" id="carousel-overlay-cards">
+                        <div class="carousel__view">
+                            <div class="carousel__content">
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--overlay">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/card-overlay2.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--overlay">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h5 class="news-card__title heading-5 heading-5--white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+                                            </a>
+                                            <div class="news-info">
+                                                <div class="news-info__details news-info__details--light">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>21 January 2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--overlay">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/card-overlay3.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--overlay">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h5 class="news-card__title heading-5 heading-5--white">Lorem ipsum dolor sit amet.</h5>
+                                            </a>
+                                            <div class="news-info">
+                                                <div class="news-info__details news-info__details--light">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>21 January 2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--overlay">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/card-overlay4.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--overlay">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h5 class="news-card__title heading-5 heading-5--white">Lorem, ipsum dolor sit amet consectetur adipisicing.</h5>
+                                            </a>
+                                            <div class="news-info">
+                                                <div class="news-info__details news-info__details--light">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>21 January 2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--overlay">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/card-overlay1.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--overlay">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h5 class="news-card__title heading-5 heading-5--white">Lorem ipsum dolor sit amet consectetur.</h5>
+                                            </a>
+                                            <div class="news-info">
+                                                <div class="news-info__details news-info__details--light">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>21 January 2021</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-container row">
+                    <div class="sm-col-2">
+                        <div class="overlay-border" data-news-category="fashion">
+                            <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--custom">Featured Posts</h4>
+                        </div>
+                        <div class="carousel aside-carousel" id="carousel-fashion">
+                            <button data-carousel-target="carousel-fashion" data-carousel-direction="left" class="aside-carousel__control aside-carousel__control--left">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button data-carousel-target="carousel-fashion" data-carousel-direction="right" class="aside-carousel__control aside-carousel__control--right">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                            <div class="carousel__view">
+                                <div class="carousel__content">
+                                    <div class="carousel__item">
+                                        <div class="news-card news-card--centered">
+                                            <div class="news-card__img-wrapper">
+                                                <img src="img/small-img1.jpg" class="news-card__img">
+                                            </div>
+                                            <div class="news-card__body news-card__body--centered">
+                                                <a href="#" class="news-link news-link--alt">
+                                                    <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet.</h3>
+                                                </a>
+                                                <div class="news-info news-info--centered">
+                                                    <div class="news-info__details news-info__details--dark">
+                                                        <i class="fas fa-clock news-info__icon"></i>
+                                                        <span>27 May 2013</span>
+                                                    </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-user news-info__icon"></i>
+                                                            <small>by</small><span>John Doe</span>
+                                                        </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-comment news-info__icon"></i>
+                                                        <span>23</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-card news-card--centered">
+                                            <div class="news-card__img-wrapper">
+                                                <img src="img/small-img2.jpg" class="news-card__img">
+                                            </div>
+                                            <div class="news-card__body news-card__body--centered">
+                                                <a href="#" class="news-link news-link--alt">
+                                                    <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+                                                </a>
+                                                <div class="news-info news-info--centered">
+                                                    <div class="news-info__details news-info__details--dark">
+                                                        <i class="fas fa-clock news-info__icon"></i>
+                                                        <span>27 May 2013</span>
+                                                    </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-user news-info__icon"></i>
+                                                            <small>by</small><span>John Doe</span>
+                                                        </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-comment news-info__icon"></i>
+                                                        <span>23</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-card news-card--centered">
+                                            <div class="news-card__img-wrapper">
+                                                <img src="img/small-img3.jpg" class="news-card__img">
+                                            </div>
+                                            <div class="news-card__body news-card__body--centered">
+                                                <a href="#" class="news-link news-link--alt">
+                                                    <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit.</h3>
+                                                </a>
+                                                <div class="news-info news-info--centered">
+                                                    <div class="news-info__details news-info__details--dark">
+                                                        <i class="fas fa-clock news-info__icon"></i>
+                                                        <span>31 December 2021</span>
+                                                    </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-user news-info__icon"></i>
+                                                            <small>by</small><span>Dennis Surfer</span>
+                                                        </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-comment news-info__icon"></i>
+                                                        <span>23</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-card news-card--centered">
+                                            <div class="news-card__img-wrapper">
+                                                <img src="img/small-img4.jpg" class="news-card__img">
+                                            </div>
+                                            <div class="news-card__body news-card__body--centered">
+                                                <a href="#" class="news-link news-link--alt">
+                                                    <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit.</h3>
+                                                </a>
+                                                <div class="news-info news-info--centered">
+                                                    <div class="news-info__details news-info__details--dark">
+                                                        <i class="fas fa-clock news-info__icon"></i>
+                                                        <span>31 December 2021</span>
+                                                    </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                            <i class="fas fa-user news-info__icon"></i>
+                                                            <small>by</small><span>Dennis Surfer</span>
+                                                        </div>
+                                                    <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-comment news-info__icon"></i>
+                                                        <span>23</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="sm-col-2">
+                            
+                        <div class="carousel__head overlay-border" data-news-category="sport">
+                            <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--custom">Sport</h4>
+                            <div class="carousel__controls carousel__controls">
+                                <button data-carousel-target="carousel-only-news-columns" data-carousel-direction="left" class="carousel__btn carousel__btn--external">
+                                    <i class="fas fa-chevron-left carousel__control-icon--external"></i>
+                                </button>
+                                <button class="carousel__btn carousel__btn--external" data-carousel-target="carousel-only-news-columns" data-carousel-direction="right">
+                                    <i class="fas fa-chevron-right carousel__control-icon--external"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="carousel" id="carousel-only-news-columns">
+                            <div class="carousel__view">
+                                <div class="carousel__content">
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list5.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__item">
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list6.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list7.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="news-column">
+                                            <div class="news-card news-card--horizontal">
+                                                <div class="news-card__img-wrapper">
+                                                    <img src="img/list8.jpg" class="news-card__img">
+                                                </div>
+                                                <div class="news-card__body news-card__body--horizontal">
+                                                    <a href="#" class="news-link news-link--alt">
+                                                        <h5 class="news-card__title heading-5 heading-5--light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat in vitae sunt eveniet.</h5>
+                                                    </a>
+                                                    <div class="news-info news-info--small">
+                                                        <div class="news-info__details news-info__details--dark">
+                                                            <i class="fas fa-clock news-info__icon"></i>
+                                                            <span>27 May 2013</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside class="aside">
+                <div class="element-container">
+                    <div class="overlay-border">
+                        <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--red">Stay Connected</h4>
+                    </div>
+                    <div class="media-links">
+                        <div class="media-links__item">
+                            <a href="#" class="media-links__link" data-media-color="internet">
+                                <div class="media-links__logo-wrapper">
+                                    <i class="fas fa-wifi media-links__logo-icon"></i>
+                                </div>
+                                <div class="media-links__details">
+                                    <h5 class="media-links__subscribers-count heading-5 heading-5--dark">18.354</h5>
+                                    <span class="media-links__subscribers-type">Subscribers</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-links__item">
+                            <a href="#" class="media-links__link" data-media-color="facebook">
+                                <div class="media-links__logo-wrapper">
+                                    <i class="fab fa-facebook-f media-links__logo-icon"></i>
+                                </div>
+                                <div class="media-links__details">
+                                    <h5 class="media-links__subscribers-count heading-5 heading-5--dark">935</h5>
+                                    <span class="media-links__subscribers-type">Followers</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-links__item">
+                            <a href="#" class="media-links__link" data-media-color="twitter">
+                                <div class="media-links__logo-wrapper">
+                                    <i class="fab fa-twitter media-links__logo-icon"></i>
+                                </div>
+                                <div class="media-links__details">
+                                    <h5 class="media-links__subscribers-count heading-5 heading-5--dark">1235</h5>
+                                    <span class="media-links__subscribers-type">Fans</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="media-links__item">
+                            <a href="#" class="media-links__link" data-media-color="google">
+                                <div class="media-links__logo-wrapper">
+                                    <i class="fab fa-google-plus media-links__logo-icon"></i>
+                                </div>
+                                <div class="media-links__details">
+                                    <h5 class="media-links__subscribers-count heading-5 heading-5--dark">6235</h5>
+                                    <span class="media-links__subscribers-type">Followers</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <div class="overlay-border">
+                        <h4 class="heading-4 heading-4--dark heading-4--expanded overlay-border overlay-border--red">Featured Posts</h4>
+                    </div>
+                    <div class="carousel aside-carousel" id="aside-carousel">
+                        <button data-carousel-target="aside-carousel" data-carousel-direction="left" class="aside-carousel__control aside-carousel__control--left">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button data-carousel-target="aside-carousel" data-carousel-direction="right" class="aside-carousel__control aside-carousel__control--right">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="carousel__view">
+                            <div class="carousel__content">
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--centered">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/small-img1.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--centered">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet.</h3>
+                                            </a>
+                                            <div class="news-info news-info--centered">
+                                                <div class="news-info__details news-info__details--dark">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>27 May 2013</span>
+                                                </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-user news-info__icon"></i>
+                                                        <small>by</small><span>John Doe</span>
+                                                    </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                    <i class="fas fa-comment news-info__icon"></i>
+                                                    <span>23</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--centered">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/small-img2.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--centered">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+                                            </a>
+                                            <div class="news-info news-info--centered">
+                                                <div class="news-info__details news-info__details--dark">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>27 May 2013</span>
+                                                </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-user news-info__icon"></i>
+                                                        <small>by</small><span>John Doe</span>
+                                                    </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                    <i class="fas fa-comment news-info__icon"></i>
+                                                    <span>23</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel__item">
+                                    <div class="news-card news-card--centered">
+                                        <div class="news-card__img-wrapper">
+                                            <img src="img/small-img3.jpg" class="news-card__img">
+                                        </div>
+                                        <div class="news-card__body news-card__body--centered">
+                                            <a href="#" class="news-link news-link--alt">
+                                                <h3 class="news-card__title heading-3 heading-3--white">Lorem ipsum dolor sit.</h3>
+                                            </a>
+                                            <div class="news-info news-info--centered">
+                                                <div class="news-info__details news-info__details--dark">
+                                                    <i class="fas fa-clock news-info__icon"></i>
+                                                    <span>31 December 2021</span>
+                                                </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                        <i class="fas fa-user news-info__icon"></i>
+                                                        <small>by</small><span>Dennis Surfer</span>
+                                                    </div>
+                                                <div class="news-info__details news-info__details--dark news-info__details--hoverable">
+                                                    <i class="fas fa-comment news-info__icon"></i>
+                                                    <span>23</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="element-container">
+                    <form action="#" class="subscribe">
+                        <h3 class="heading-3 heading-3--white heading-3--expanded">Subscribe to Feeds</h3>
+                        <div class="subscribe__input-control">
+                            <input type="text" placeholder="Email" class="subscribe__input">
+                            <button type="submit" class="subscribe__submit-btn">
+                                <i class="fas fa-arrow-alt-circle-right"></i>
+                            </button>
+                        </div>
+                        <span class="subscribe__description">
+                            Get all the latest news by subscribing to our main media channels.
+                        </span>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 </html>

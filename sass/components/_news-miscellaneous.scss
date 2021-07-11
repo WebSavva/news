@@ -14,6 +14,9 @@
     color: lighten($light-gray-color-2, 40%);
     font-size: 1.1rem;
     font-style: italic;
+    &--centered {
+        justify-content: center;
+    }
     &--large {
         font-size: 1.3rem;
     }
@@ -78,4 +81,10 @@
     @include pseudoLink(hover) {
         opacity: .7;
     }
+}
+
+.news-column {
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
 }

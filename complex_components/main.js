@@ -51,9 +51,82 @@ window.onload = () => {
                 dotControlsColor: "#fff",
                 itemsGap: 0,
                 dotControlsPosition: {
-                    top: 20,
-                    right: 20
+                    top: '2rem',
+                    right: '2rem'
                 }
+            }
+        },
+        {
+            id: 'carousel-full-page',
+            type: 'large',
+            breakpoints: {
+                1100: 4,
+                800: 3,
+                600: 2,
+                500: 1
+            },
+            style: {
+                itemsGap:10,
+            }
+        },
+
+        {
+            id: 'aside-carousel',
+            type: 'small',
+            style: {
+                dotControlsColor: "rgb(238, 58, 58)",
+                itemsGap: 0,
+                dotControlsPosition: {
+                    left: '50%',
+                    bottom: '1rem'
+                },
+                dotControlsCentered: true
+            }
+        },
+        {
+            id: 'carousel-news-columns',
+            type: 'large',
+            breakpoints: {
+                1100: 2,
+                600: 1,
+            },
+            style: {
+                itemsGap:10,
+            }
+        },
+        {
+            id: 'carousel-overlay-cards',
+            type: 'large',
+            breakpoints: {
+                1100: 3,
+                800: 2,
+                600: 1,
+            },
+            style: {
+                itemsGap:10,
+            }
+        },
+        {
+            id: 'carousel-fashion',
+            type: 'small',
+            style: {
+                dotControlsColor: "#fff",
+                itemsGap: 0,
+                dotControlsPosition: {
+                    left: '50%',
+                    bottom: '1rem'
+                },
+                dotControlsCentered: true
+            }
+        },
+        {
+            id: 'carousel-only-news-columns',
+            type: 'large',
+            breakpoints: {
+                1100: 1,
+            },
+            style: {
+                itemsGap:10,
             }
         },
     ];

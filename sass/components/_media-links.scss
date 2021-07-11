@@ -1,0 +1,79 @@
+.media-links {
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        flex: 0 0 45%;
+        margin: .5rem;
+    }
+
+    &__link {
+        display: flex;
+        transition: $default-transition;
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    &__logo-wrapper {
+        position: relative;
+        padding: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--media-color);
+        flex: 0 0 25%;
+        // margin-right: 1rem;
+        &::after {
+            content: "";
+            position: absolute;
+            width: .5rem;
+            height: .8rem;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            background-color: inherit;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+        }
+    }
+
+    &__logo-icon {
+        color: #fff;
+        font-size: 1.4rem;
+    }
+
+    &__details {
+        padding: .5rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba($light-gray-color-2, .15);
+        flex: 1;
+    }
+
+    &__subscribers-count {
+        margin-bottom: .3rem;
+    }
+
+    &__subscribers-type {
+        font-size: 1.1rem;
+        color: $light-gray-color-2;
+    }
+}
+
+[data-media-color="twitter"] {
+    --media-color:#7AD8F0;
+}
+
+[data-media-color="facebook"] {
+    --media-color:#7A99F0;
+}
+
+[data-media-color="internet"] {
+    --media-color:#F0771E;
+}
+
+[data-media-color="google"] {
+    --media-color:#F14133;
+}

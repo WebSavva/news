@@ -1,4 +1,21 @@
-.row {
+.container {
     width: 114rem;
     margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: baseline;
+}
+
+.sm-col-2 {
+    @media only screen and (min-width:600px) {
+        flex: 2;
+    }
+}
+
+[class*="-col-"] {
+    &:not(:last-child) {
+        margin-right: 2rem;
+    }
 }
