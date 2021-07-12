@@ -15,15 +15,6 @@
     }
 }
 
-.main-news {
-    flex: 4;
-    padding-right: 2rem;
-}
-
-.aside {
-    padding-left: 2rem;
-    flex:  2;
-}
 
 
 .video-carousel-wrapper {
@@ -52,4 +43,10 @@
             left: -100%;
         }
     }
+}
+
+.footer {
+    background-color: $dark-gray-color;
+    color: rgba($ligt-gray-color-3, .3);
+    
 }

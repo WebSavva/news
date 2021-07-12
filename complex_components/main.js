@@ -1,6 +1,8 @@
 import buildCarousel from './carousel/script/buildCarousel';
 import NewsSticker from './news-sticker/script/NewsSticker';
-import NewsSicker from './news-sticker/script/NewsSticker'
+import NewsSicker from './news-sticker/script/NewsSticker';
+import TabKeeper from './tab-keeper/script/TabKeeper';
+
 const state = {};
 window.onload = () => {
     
@@ -162,8 +164,9 @@ window.onload = () => {
             ]
         }
     ];
-
+    const tabKeeperIds = ['aside-tabs']
     state.carousels = carouselConfigs.map((config) => buildCarousel(config));
     state.newsStickers = newsStickerContent.map((newsData) => new NewsSticker(newsData));
+    state.tabKeepers = tabKeeperIds.forEach((id) => new TabKeeper(id) );
     
 }

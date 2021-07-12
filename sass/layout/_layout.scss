@@ -5,6 +5,7 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     &--centered {
         align-items: baseline;
     }

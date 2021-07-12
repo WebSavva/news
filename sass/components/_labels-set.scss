@@ -1,35 +1,73 @@
 .labels-set {
     display: flex;
-
+    flex-wrap: wrap;
+    
     &__item {
-        font-size: 1.1rem;
+        @extend %label;
         border: $light-gray-border;
-        padding: .5rem 1rem;
         position: relative;
-        border-radius: $small-rounded;
-        transition: $default-transition;
+        color: rgba($light-gray-color-1, .6);
         cursor: pointer;
         font-weight: 700;
+        margin: .2rem;
+        @include pseudoLink(link) {
+            color: rgba($light-gray-color-1, .6);
+        }
         &:not(:last-child) {
             margin-right: .5rem;
         }
-        &::before {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 8px;
-            height: 4px;
-            background: inherit;
-            -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+        &--sharp {
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 8px;
+                height: 4px;
+                background: inherit;
+                -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 100%);
+            }
+            &:hover,
+            &.active {
+                background: $light-yellow;
+                color: $light-gray-color-1;
+            }
         }
 
-        &:hover,
-        &--selected {
-            background: $light-yellow;
-            color: $light-gray-color-1;
+        &--dark {
+            font-size: 1.3rem;
+            padding: .8rem 1.4rem;
+            text-transform: unset;
+            font-weight: 400;
+            &:hover {
+                color: #fff;
+                background: $dark-gray-color;
+            }
         }
     }
+    &__media-link {
+        @include pseudoLink(link) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .7rem;
+            flex: 0 0 3.5rem;
+            border: 1px solid currentColor;
+            font-size: 1.7rem;
+            margin: .5rem 0;
+            border-radius: 3px;
+            transition: $default-transition;
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+        &:hover {
+            color: #fff;
+            border-color: transparent;
+            background-color: var(--media-color);
+        }
+    }
+
     
 }

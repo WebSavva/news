@@ -19,6 +19,10 @@
     padding-right: 2rem !important;
 }
 
+.hidden {
+    display: none!important;
+}
+
 .overlay-border {
     position: relative;
     backface-visibility: hidden;
@@ -36,7 +40,13 @@
         @extend %bordered-bottom;
         background-color:lighten($light-gray-color-2, 35%);
     }
-
+    &--current-colored {
+        &::after {
+            background-color: currentColor;
+        }
+        
+    }
+    
     &--custom, 
     &--red {
         &::after {

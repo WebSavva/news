@@ -1,0 +1,47 @@
+.tab-keeper {
+    &__head {
+        display: flex;
+        margin-bottom: .1rem;
+        user-select: none;
+    }
+
+    &__btn {
+        flex: 1;
+        font-size: 1.3rem;
+        padding: 1.5rem 1rem;
+        background: $dark-gray-color;
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: $default-transition;
+        cursor: pointer;
+        &:not(:last-child) {
+            margin-right: .1rem;
+        }
+        &.active,
+        &:hover {
+            background: $light-red;
+        }
+        
+    }
+
+    &__body {
+        border-top: 2px solid $light-red;
+        padding-top: 2rem;
+        background: $ligt-gray-color-3;
+    }
+
+    &__tab-content {
+        animation: fadeIn 1s;
+    }   
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -88,3 +88,22 @@
     flex-direction: column;
     gap:2rem;
 }
+
+.photo-links-set {
+    display: flex;
+    flex-wrap: wrap;
+    &__link {
+        flex: 0 0 25%;
+        transition: $default-transition;
+        &:hover {
+            opacity: .7;
+        }
+        margin: .5rem;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}

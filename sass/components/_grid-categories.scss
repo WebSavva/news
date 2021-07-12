@@ -1,0 +1,31 @@
+.grid-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    align-items: center;
+    &__cell{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 1.2rem;
+        padding: 1rem;
+        gap: 1rem;
+        font-weight: 700;
+        display: flex;
+        border-bottom: 1px solid currentColor;
+        transition: $default-transition;
+        &:hover {
+            color: $light-red;
+        }
+    }
+
+    &__title {
+
+    }
+
+    &__count-label {
+        padding: .3rem;
+        border: 1px solid currentColor;
+        border-radius: 4px;
+    }
+}
