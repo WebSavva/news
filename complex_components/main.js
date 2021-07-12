@@ -129,6 +129,19 @@ window.onload = () => {
                 itemsGap:10,
             }
         },
+        {
+            id: 'carousel-video',
+            type: 'large',
+            breakpoints: {
+                1100: 4,
+                800: 3,
+                600: 2,
+                500: 1
+            },
+            style: {
+                itemsGap:10,
+            }
+        },
     ];
     const newsStickerContent = [
         {

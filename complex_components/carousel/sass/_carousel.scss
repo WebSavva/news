@@ -17,7 +17,7 @@
             padding: 0.5rem 1rem;
             border-radius: 4px;
             border: $light-gray-border;
-            background-color: #fff;
+            background-color: transparent;
             display: inline-flex;
             align-items: start;
             justify-content: center;
@@ -36,11 +36,15 @@
             color: currentColor;
         }
     }
-
+    
     //body
     &__view {
         width: 100%;
         overflow: hidden;
+        
+        &--full {
+            overflow: visible;
+        }
     }
 
     &__content {
@@ -56,6 +60,9 @@
 
         &--slow-motion {
             transition: all .6s;
+        }
+        &--full {
+
         }
     }
 

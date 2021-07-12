@@ -5,17 +5,29 @@
 
 .row {
     display: flex;
-    align-items: baseline;
-}
-
-.sm-col-2 {
-    @media only screen and (min-width:600px) {
-        flex: 2;
+    &--centered {
+        align-items: baseline;
     }
 }
 
-[class*="-col-"] {
+[class*="col-"] {
     &:not(:last-child) {
         margin-right: 2rem;
     }
+}
+
+$breakpoints: ("sm": 36em, "md": 48em, "lg": 62em, "xl": 75em);
+
+@each $breakpoint, $value in $breakpoints {
+    @for $i from 1 through 12 {
+        .col-#{$breakpoint}-#{$i} {
+            display: block;
+            width: 100%;
+
+            @media only screen and (min-width:$value) {
+                flex: $i;
+            }
+        }
+    }
+  
 }

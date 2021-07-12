@@ -46,6 +46,7 @@
         grid-row: 1/ -1;
         grid-column: 1/ -1;
     }
+
     &__img-wrapper {
         position: relative;
     }
@@ -112,6 +113,20 @@
             &:hover {
                 background: rgba(0, 0, 0, .8);
             }
+        }
+    }
+
+    &__play-video-btn {
+        position: absolute;
+        top: 1rem;
+        left: .5rem;
+        font-size: 2.5rem;
+        padding: .5rem;
+        color: #fff;
+        cursor: pointer;
+        transition: $default-transition;
+        &:hover {
+            color: $light-red;
         }
     }
 }

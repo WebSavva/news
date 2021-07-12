@@ -65,3 +65,19 @@
 .element-container {
     margin: 3rem 0;
 }
+
+.light-gray-bordered {
+    border-right: .5px solid lighten($light-gray-color-2, 45%);
+}
+
+$padding-value-map: ("sm": 1rem, "md": 2rem, "lg": 3rem, "xlg": 5rem);
+$padding-directions: left, top, bottom, right;
+
+@each $typePadding, $valuePadding in $padding-value-map {
+    @each $dirPadding in $padding-directions {
+        .p-#{$typePadding}-#{$dirPadding} {
+            padding-#{$dirPadding}: $valuePadding;
+        }
+    }
+  
+}
