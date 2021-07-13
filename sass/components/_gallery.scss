@@ -5,40 +5,76 @@
     display: grid;
     grid-template-columns: 1fr 2fr repeat(3,1fr);
     grid-template-rows: repeat(2, min-content);
+
+    @include responseQuery(xl) {
+        grid-template-columns: 1fr 2fr repeat(2,1fr);
+     }
+
+    @include responseQuery(lg) {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    
+    @include responseQuery(md) {
+        grid-template-columns: 1fr 2fr;
+     }
+     @include responseQuery(sm) {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        padding-top: 0;
+     }
     &__card {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 100%;
         &--1 {
-            
+            @include responseQuery(sm) {
+                display: none;
+             }
         }
 
         &--2 {
-
+            @include responseQuery(md) {
+                display: none;
+             }
         }
 
         &--3 {
+            @include responseQuery(lg) {
+                display: none;
+             }
 
         }
 
         &--4 {
-
-        }
-
-        &--5 {
-
-        }
-
-        &--6 {
-
-        }
-
-        &--7 {
-
-        }
-
-        &--8 {
-
+            @include responseQuery(xl) {
+                display: none;
+             }
+            }
+            
+            &--5 {
+                @include responseQuery(sm) {
+                    display: none;
+                 }
+                
+            }
+            
+            &--6 {
+                @include responseQuery(md) {
+                    display: none;
+                 }
+            }
+            
+            &--7 {
+                @include responseQuery(lg) {
+                    display: none;
+                 }
+            }
+            
+            &--8 {
+                @include responseQuery(xl) {
+                    display: none;
+                 }
+                
         }
 
     }
@@ -95,6 +131,7 @@
         display: block;
         width: 100%;
         height: 100%;
+        filter: brightness(70%);
     }
     &__img,
     &__news-details {
@@ -125,6 +162,10 @@
             &:hover {
                 background-color: rgba(255, 255, 255, .8);
             }
+
+            @include responseQuery(lg) {
+                padding-bottom: 1rem;
+             }
         }
     }
 
@@ -140,11 +181,15 @@
         opacity: 0;
         transition: $default-transition;
         margin-bottom: 1rem;
+        @include responseQuery(lg) {
+            display: none;
+         }
     }
 
     &__card:hover  &__news-description {
         opacity: 1;
         height: 4rem;
+
     }
 }
 

@@ -1,5 +1,16 @@
 html {
     font-size: 62.5%;
+    @include responseQuery(lg) {
+       font-size: 59%;
+    }
+
+    @include responseQuery(md) {
+        font-size: 56.5%;
+     }
+
+    @include responseQuery(md) {
+        font-size: 53.5%;
+     }
 }
 
 %heading {
@@ -14,31 +25,49 @@ html {
 .heading-1 {
     @extend %heading;
     font-size: 3rem;
+    @include responseQuery(md) {
+        font-size: 3.2rem;
+    }
 }
 
 .heading-2 {
     @extend %heading;
     font-size: 2rem;
+    @include responseQuery(md) {
+        font-size: 2.7rem;
+    }
 }
 
 .heading-3 {
     @extend %heading;
     font-size: 1.7rem;
+    @include responseQuery(md) {
+        font-size: 2.2rem;
+    }
 }
 
 .heading-4 {
     @extend %heading;
     font-size: 1.4rem;
+    @include responseQuery(md) {
+        font-size: 1.9rem;
+    }
 }
 
 .heading-5 {
     @extend %heading;
     font-size: 1.2rem;
+    @include responseQuery(md) {
+        font-size: 1.6rem;
+    }
 }
 
 .heading-6 {
     @extend %heading;
     font-size: .9rem;
+    @include responseQuery(md) {
+        font-size: 1.2rem;
+    }
 }
 
 .heading-1,

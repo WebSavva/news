@@ -4,16 +4,34 @@
     top: 0;
     background: $ligt-gray-color-3;
     border-bottom: 1px solid darken($ligt-gray-color-3, 10%);
+    transition: $default-transition;
+    @include responseQuery(sm) {
+        display: block;
+        position: unset;
+        visibility: hidden;
+        height: 0;
+        padding-top: 0rem;
+        border: none;
+        overflow: auto;
+     }
     
     &__content {
         display: flex;
         justify-content: space-between;
+        
     }
-
+    
     //MENU
     &__menu {
         display: flex;
         position: relative;
+        @include responseQuery(xl) {
+            width: 100%;
+        }
+        @include responseQuery(sm) {
+            flex-direction: column;
+            justify-content: unset;
+         }
     }
     &__item {
         color: $light-gray-color-2;
@@ -23,6 +41,18 @@
         &:not(:last-child) {
             margin-right: 1px;
         }
+
+        @include responseQuery(xl) {
+           flex: 1;
+        }
+
+        @include responseQuery(sm) {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+         }
+
+
     }
 
     &__item:hover &__link {
@@ -33,6 +63,16 @@
         &::before {
             height: 100%;
             z-index: -1;
+
+            @include responseQuery(sm) {
+                width: 100%;
+             }
+        }
+    }
+
+    &__item:last-child &__dropdown {
+        @include responseQuery(xl) {
+            display: none;
         }
     }
     
@@ -46,6 +86,20 @@
             color: inherit;
             z-index: 10;
             transition: all .2s;
+            height: 100%;
+
+            @include responseQuery(xl) {
+                padding: 1rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+             }
+
+             @include responseQuery(sm) {
+                justify-content: flex-start;
+             }
+             
+
         }
         &::before {
             content: "";
@@ -57,6 +111,11 @@
             left: 0;
             z-index: 1;
             transition: inherit;
+            @include responseQuery(sm) {
+                width: 3px;
+                left: -5px;
+                height: 100%;
+             }
         }
         
     }
@@ -65,6 +124,9 @@
     &__chevron-icon-down {
         margin-left: .5rem;
         font-size: 1.1rem;
+        @include responseQuery(lg) {
+            display: none;
+         }
 
     }
     &__dropdown {
@@ -91,6 +153,10 @@
             display: flex;
             background: #fff;
         }
+
+        @include responseQuery(lg) {
+            display: none;
+         }
     }
 
     &__dropdown-list,
@@ -188,6 +254,10 @@
         align-self: center;
         display: grid;
         grid-template-columns: repeat(2,min-content);
+        
+        @include responseQuery(xl) {
+            display: none;
+        }
     }
     
     &__search-input {
@@ -201,6 +271,7 @@
         &:focus {
             outline: none;
         }
+
     }
 
     &__search-btn {
@@ -217,7 +288,23 @@
         font-size: 1.2rem;
         color: $light-gray-color-2;
     }
+
 }
+
+#nav-toggler-checkbox {
+    display: none;
+}
+
+#nav-toggler-checkbox:checked + .nav {
+    @include responseQuery(sm) {
+        visibility: visible;
+        height: 30vh;
+        padding: 2rem 0;
+     }
+}
+
+
+
 
 [data-news-category="home"] {
     --current-color:#F44336;

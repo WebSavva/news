@@ -6,5 +6,5 @@ module.exports = {
     filename: 'index.js',
     path: __dirname,
   },
-  mode: 'development'
+  mode: 'production'
 };

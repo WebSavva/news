@@ -12,6 +12,9 @@
 
     &__img {
         margin-top: 1rem;
+        width: 100%;
     }
-
+    @include responseQuery(xl) {
+        display: none;
+    }
 }

@@ -6,6 +6,10 @@
     text-transform: uppercase;
     font-weight: 700;
     transition: $default-transition;
+    @include responseQuery(lg) {
+        font-size: 1.3rem;
+        padding: .8rem 1rem;
+    }
 }
 
 .news-info {
@@ -14,11 +18,17 @@
     color: lighten($light-gray-color-2, 40%);
     font-size: 1.1rem;
     font-style: italic;
+    @include responseQuery(md) {
+        font-size: 1.3rem;
+    }
     &--centered {
         justify-content: center;
     }
     &--large {
         font-size: 1.3rem;
+        @include responseQuery(md) {
+            font-size: 1.8rem;
+        }
     }
     &__details {
         display: flex;
@@ -81,6 +91,7 @@
     @include pseudoLink(hover) {
         opacity: .7;
     }
+
 }
 
 .news-column {

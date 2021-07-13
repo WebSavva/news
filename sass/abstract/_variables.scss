@@ -15,3 +15,12 @@ $default-transition: all .3s;
 //BORDER
 $small-rounded: 5px;
 $light-gray-border:.5px solid rgba($light-gray-color-2, .1);
+
+// BREAKPOINTS
+$sm: 36em;
+$md: 48em;
+$lg: 62em;
+$xl: 75em;
+$xxl: 87.5em;
+
+$breakpoints: ("sm": $sm, "md": $md, "lg": $lg, "xl": $xl, "xxl":$xxl);

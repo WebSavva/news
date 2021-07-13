@@ -6,7 +6,12 @@
   "scripts": {
     "sass-watch": "node-sass sass/main.scss css/style.css -w",
     "carousel-sass-watch": "node-sass complex_components/carousel/sass/_carousel.scss components/carousel/css/carousel.css -w",
-    "webpack-watch" : "webpack --watch"
+    "webpack-watch" : "webpack --watch",
+    "build-webpack": "webpack",
+    "sass-compile" : "node-sass sass/main.scss css/style.css",
+    "autoprefix-css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.css -o css/style.css",
+    "compress-css": "node-sass css/style.css css/style.css --output-style compressed",
+    "build-css" : "npm-run-all sass-compile autoprefix-css compress-css"
   },
   "author": "",
   "license": "ISC",

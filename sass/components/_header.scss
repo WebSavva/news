@@ -1,7 +1,14 @@
 .header {
+    @include responseQuery(sm) {
+        padding: 1rem;
+        background: $light-gray-color-1;
+      }
     &__info {
         background: $dark-gray-color;
         padding: 1rem 0;
+        @include responseQuery(md) {
+            display: none;
+         }
     }
     
     &__info-content {
@@ -9,11 +16,17 @@
         justify-content: space-between;
         font-size: 1.1rem;
         color: $light-gray-color-2;
+        @include responseQuery(lg) {
+            justify-content: center;
+         }
     }
 
     &__info-list {
         display: flex;
         align-items: center;
+        @include responseQuery(lg) {
+            display: none;
+         }
     }
 
     &__info-item {
@@ -47,6 +60,7 @@
 
     &__info-icons {
         display: flex;
+
     }
 
     &__link-media {
@@ -77,5 +91,57 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include responseQuery(xl) {
+            justify-content: center;
+        }
+
+        @include responseQuery(sm) {
+            justify-content: space-between;
+        }
+    }
+
+    &__nav-toggler {
+        display: none;
+        @include responseQuery(sm) {
+            display: block;
+            height: 3.5rem;
+            
+        }
+    }
+    &__logo {
+        @include responseQuery(sm) {
+            max-width: 40%;
+        }
+    }
+    &__toggler-btn {
+        @include responseQuery(sm) {
+           display: block;
+           width: 3rem;
+           height: 4px;
+           background: rgba($ligt-gray-color-3, .6);
+           position: relative;
+           backface-visibility: hidden;
+           border-radius: 5px;
+           
+           &::after,
+           &::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               width: 3rem;
+               height: 4px;
+               background: inherit;
+               border-radius: inherit;
+           }
+    
+           &::after {
+               top: 2rem;
+           }
+    
+           &::before {
+                top: 1rem;
+           }
+    
+        }
     }
 }

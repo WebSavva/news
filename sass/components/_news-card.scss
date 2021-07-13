@@ -1,4 +1,5 @@
 .news-card {
+    // height: 100%;
     &--vertical {
         display: flex;
         flex-direction: column;
@@ -56,6 +57,7 @@
     &__img {
         display: block;
         width: 100%;
+        filter: brightness(70%);
     }
     
     &__label-category {
@@ -63,6 +65,7 @@
         bottom: 10%;
         left: 5%;
         z-index: 3;
+        
     }
     &__title {
         text-transform: initial;

@@ -5,7 +5,7 @@ import TabKeeper from './tab-keeper/script/TabKeeper';
 
 const state = {};
 window.onload = () => {
-    
+    setTimeout(() => document.getElementById('loader').remove(), 2500);
     const carouselConfigs = [
         {
             id: 'carousel-world',
@@ -14,7 +14,6 @@ window.onload = () => {
                 1100: 4,
                 800: 3,
                 600: 2,
-                500: 1
             },
             style: {
                 itemsGap:10,
@@ -27,7 +26,6 @@ window.onload = () => {
                 1100: 4,
                 800: 3,
                 600: 2,
-                500: 1
             },
             style: {
                 itemsGap:10,
@@ -40,7 +38,6 @@ window.onload = () => {
                 1100: 4,
                 800: 3,
                 600: 2,
-                500: 1
             },
             style: {
                 itemsGap:10,
@@ -65,7 +62,6 @@ window.onload = () => {
                 1100: 4,
                 800: 3,
                 600: 2,
-                500: 1
             },
             style: {
                 itemsGap:10,
@@ -90,7 +86,6 @@ window.onload = () => {
             type: 'large',
             breakpoints: {
                 1100: 2,
-                600: 1,
             },
             style: {
                 itemsGap:10,
@@ -102,7 +97,6 @@ window.onload = () => {
             breakpoints: {
                 1100: 3,
                 800: 2,
-                600: 1,
             },
             style: {
                 itemsGap:10,
@@ -125,7 +119,6 @@ window.onload = () => {
             id: 'carousel-only-news-columns',
             type: 'large',
             breakpoints: {
-                1100: 1,
             },
             style: {
                 itemsGap:10,
@@ -138,7 +131,6 @@ window.onload = () => {
                 1100: 4,
                 800: 3,
                 600: 2,
-                500: 1
             },
             style: {
                 itemsGap:10,

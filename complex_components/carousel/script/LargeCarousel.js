@@ -26,12 +26,20 @@ export default class LargeCarousel extends Carousel {
     calculateSize() {
         let currentBreakpoint;
         for (let breakpoint of Object.keys(this.breakpoints)) {
-            if (+breakpoint <= document.body.offsetWidth) {
+            // console.log('-------------------');
+            // console.log(this.id);
+            // console.log(breakpoint);
+            // console.log(window.innerWidth);
+            // console.log(+breakpoint <= window.innerWidth);
+            if (+breakpoint <= window.innerWidth) {
                 currentBreakpoint = breakpoint;
             }
         }
-
-        this.itemsPerSlide = this.breakpoints[currentBreakpoint];
+        if (currentBreakpoint) {
+            this.itemsPerSlide = this.breakpoints[currentBreakpoint];
+        } else {
+            this.itemsPerSlide = 1;
+        }
         this.carouselEnd = this.itemsNumber - this.itemsPerSlide;
         this.carouselContent.classList.add('carousel__content--large');
     }
@@ -43,7 +51,10 @@ export default class LargeCarousel extends Carousel {
                                       padding: 0 ${this.itemsGap / 10}rem`;
             }
             );
-        this.itemWidth = this.items[0].offsetWidth;
+            this.itemWidth = this.items[0].offsetWidth;
+            console.log(this.id);
+            console.log(this.itemsPerSlide);
+            console.log(this.itemWidth);
     }
 
     changeCurrentSlideNumber() {

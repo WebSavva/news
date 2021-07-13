@@ -1,8 +1,15 @@
 .container {
     width: 114rem;
     margin: 0 auto;
-}
+    // @include responseQuery(xxl) {
+    //     width: 100rem;
+    // }
 
+    @include responseQuery(xl) {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -12,12 +19,13 @@
 }
 
 [class*="col-"] {
-    &:not(:last-child) {
-        margin-right: 2rem;
+    @media only screen and (min-width:$sm) {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
     }
 }
 
-$breakpoints: ("sm": 36em, "md": 48em, "lg": 62em, "xl": 75em);
 
 @each $breakpoint, $value in $breakpoints {
     @for $i from 1 through 12 {
