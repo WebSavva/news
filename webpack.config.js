@@ -13,7 +13,7 @@ const getCssLoaders = (isDevelopment) => {
     'sass-loader'
   ];
 
-  if (isDevelopment) loaders.splice(loaders.length - 1, 0, 'postcss-loader');
+  if (!isDevelopment) loaders.splice(loaders.length - 1, 0, 'postcss-loader');
 
   return loaders;
 };
